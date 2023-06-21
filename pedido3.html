@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.3/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+ 
+   <title>Pagina 1 </title>
+</head>
+<body>
+    <div style="margin:24px;">
+        <nav class="navbar navbar-light" style="background-color: #e0e0e0;">
+           <div class="container">
+             <a class="navbar-brand" href="index3.html">Inicio</a> 
+             <ul class="nav navbar-nav">
+               <li class="active">
+                 <a href="menu3.html">Menu</a>
+               </li>
+               <li>
+                <a href="perfil.html">Perfil</a>
+               </li>
+               <li >
+                   <a href="formulario3.html">Formulario</a>
+               </li>
+               <li>
+                   <a href="resultado3.html">Resultado</a>    
+               </li>
+               <li>
+                <a href="calculadora3.html">Calculadora</a>    
+            </li>
+            <li>
+                <a href="calculadorafisica3.html">Calculadora Fisica</a>    
+            </li>
+               <li>
+                <a href="pedido3.html">Pedido gorras</a>
+             </li> 
+               <li>
+                   <a href="apimovies2.html">Peliculas</a>
+               </li>      
+               <li class="active">
+                   <a href="cuestionario3.html">cuestionario</a>
+               </li>    
+              </ul>
+           </div>
+      </nav>
+    </div>  
+   <h1>FORMULARIO</h1>  
+
+    
+    <form id="pedido">
+    <p>Nombre: <input type="text" name="nombre" id="nombre" size="40">
+    </p>
+
+
+    <p>Apellido: <input type="text" name="apellido" id="apellido" size="40">
+    </p>
+
+    <p>Colonia: <input type="text" name="colonia" id="colonia" size="40">
+    </p>
+
+    <p>Telefono: <input type="text" name="telefono" id="telefono" size="40">
+    </p>
+    <p>Sexo: <input type="text" name="sexo" id="sexo" size="40">
+    </p>
+    <p>Direccion: <input type="text" name="direccion" id="direccion" size="40">
+    </p>
+
+<p>Sexo: <input type="radio" name="sexo" value="Hombre"><green>Hombre</green> <input type="radio" name="sexo" value="Mujer"><purple>Mujer</purple><br><br>
+     <p>¿que pediras? 
+        <select name="menu" id="menu">
+          <option value="Gorra de puma">Gorra de puma</option>
+          <option value="Gorra de vaca">Gorra de vaca</option>
+          <option value="Gorra de pantera">Gorra de pantera</option>
+          <option value="Gorra de New York">Gorra de New York</option>
+          <option value="Gorra de LA">Gorra de LA</option>
+          <option value="Gorra de Pirates">Gorra de Pirates</option>
+
+        <input type="submit" value="Pedido">
+        <input type="reset" value="Borrar">   
+    </form>
+    <script type="text/javascript">
+        const form=document.getElementById("pedido");
+              form.addEventListener("submit", function(event){
+                event.preventDefault();
+                const formData=new FormData(form);
+                const orden={
+                    nombre:formData.get("nombre"),
+                    apellido:formData.get("apellido"),
+                    telefono:formData.get("telefono"),
+                    direccion:formData.get("direccion"),
+                    colonia:formData.get("colonia"),
+                    sexo:formData.get("sexo"),
+                    menu:formData.get("menu")
+                };
+                localStorage.setItem ("orden",JSON.stringify(orden));
+                window.location.href="pedidorealizado.html";
+              });
+    </script>
+
+</body>
+</html>
+</body>
+</html>

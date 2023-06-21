@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.3/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+ 
+   <title>Pagina 1 </title>
+</head>
+<body>
+    <div style="margin:24px;">
+        <nav class="navbar navbar-light" style="background-color: #e0e0e0;">
+           <div class="container">
+             <a class="navbar-brand" href="index3.html">Inicio</a> 
+             <ul class="nav navbar-nav">
+               <li class="active">
+                 <a href="menu3.html">Menu</a>
+               </li>
+               <li>
+                <a href="perfil.html">Perfil</a>
+               </li>
+               <li >
+                   <a href="formulario3.html">Formulario</a>
+               </li>
+               <li>
+                   <a href="resultado3.html">Resultado</a>    
+               </li>
+               <li>
+                <a href="calculadora3.html">Calculadora</a>    
+            </li>
+            <li>
+                <a href="calculadorafisica3.html">Calculadora Fisica</a>    
+            </li>
+               <li>
+                <a href="pedido3.html">Pedido gorras</a>
+             </li> 
+               <li>
+                   <a href="apimovies2.html">Peliculas</a>
+               </li>      
+               <li class="active">
+                   <a href="cuestionario3.html">cuestionario</a>
+               </li>    
+              </ul>
+           </div>
+      </nav>
+    </div>  
+
+   <h1>PEDIDO REALIZADO</h1> 
+   <h1>con exito</h1>
+   <ul>
+    <p><strong>Nombre: </strong><span id="nombre"></span></p>
+    <p><strong>Apellido: </strong><span id="apellido"></span></p>
+    <p><strong>Telefono: </strong><span id="telefono"></span></p>
+    <p><strong>Direccion: </strong><span id="direccion"></span></p>
+    <script type="text/javascript">
+        const orden=JSON.parse(localStorage.getItem("orden"));
+        document.getElementById("nombre").textContent=orden.nombre;
+         document.getElementById("apellido").textContent=orden.apellido;
+          document.getElementById("telefono").textContent=orden.telefono
+           document.getElementById("direccion").textContent=orden.direccion;
+            document.getElementById("colonia").textContent=orden.coloia;
+             document.getElementById("sexo").textContent=orden.sexo;
+              document.getElementById("menu").textContent=orden.menu;
+               document.getElementById("Gorra de puma").textContent=gorradepuma;
+                document.getElementById("Gorra de vaca").textContent=orden.gorradevaca;
+                 document.getElementById("Gorra de pantera").textContent=orden.gorradepantera;
+                  document.getElementById("Gorra de new york").textContent=orden.gorradenewyork;
+                   document.getElementById("Gorra de la").textContent=orden.gorradela;
+                    document.getElementById("Gorra de piratas").textContent=orden.gorradepiratas;
+
+    </script>
+    </ul>
+</body>
+</html>
